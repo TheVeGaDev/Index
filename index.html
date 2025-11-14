@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VEGA - النظام البرمجي المتكامل</title>
+    
+    <!-- CDN Links -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Local Files -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">VEGA AI</div>
+        <div class="loading-bar">
+            <div class="loading-progress" id="loadingProgress"></div>
+        </div>
+        <div class="loading-stats">
+            <div class="stat">جاري تحميل النظام...</div>
+            <div class="stat" id="loadStatus">تهيئة الوحدات</div>
+        </div>
+    </div>
+
+    <!-- Three.js Background -->
+    <div id="three-container"></div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="nav-brand">
+            <div class="vega-logo">VEGA</div>
+            <span class="nav-subtitle">النظام البرمجي المتكامل</span>
+        </div>
+        <div class="nav-links">
+            <a href="#home" class="nav-link active">الرئيسية</a>
+            <a href="#services" class="nav-link">الخدمات</a>
+            <a href="#projects" class="nav-link">المشاريع</a>
+            <a href="#team" class="nav-link">الفريق</a>
+            <a href="#contact" class="nav-link">التواصل</a>
+            <a href="admin.html" class="nav-link admin-btn">لوحة التحكم</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span>🚀 الثورة البرمجية المصرية</span>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-main">VEGA</span>
+                <span class="title-sub">النظام البرمجي المتكامل</span>
+            </h1>
+            <p class="hero-description">
+                منصة متكاملة تجمع بين قوة Python، Java، PHP، C#، و JavaScript 
+                في نظام واحد متكامل لتطوير الحلول البرمجية المتقدمة
+            </p>
+            
+            <div class="hero-actions">
+                <button class="btn btn-primary" onclick="scrollToSection('projects')">
+                    <i class="fas fa-rocket"></i>
+                    مشاهدة المشاريع
+                </button>
+                <button class="btn btn-secondary" onclick="openDemo()">
+                    <i class="fas fa-play"></i>
+                    تجربة النظام
+                </button>
+            </div>
+
+            <!-- Tech Stack -->
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class="fab fa-python"></i>
+                    <span>Python AI</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-java"></i>
+                    <span>Java Enterprise</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-php"></i>
+                    <span>PHP CMS</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-microsoft"></i>
+                    <span>C# .NET</span>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js"></i>
+                    <span>Node.js</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="stat-number" data-count="150">0</div>
+                    <div class="stat-label">مشروع مكتمل</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">عميل راضي</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="10000">0</div>
+                    <div class="stat-label">ساعة تطوير</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">لغات برمجة</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2 class="section-title">خدماتنا المتكاملة</h2>
+            <p class="section-subtitle">نقدم حلولاً برمجية شاملة باستخدام أحدث التقنيات العالمية</p>
+            
+            <div class="services-grid" id="servicesGrid">
+                <!-- Services will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title">مشاريعنا</h2>
+            <p class="section-subtitle">أبرز المشاريع التي تم تطويرها بأنظمة متكاملة</p>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">الكل</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="java">Java</button>
+                <button class="filter-btn" data-filter="php">PHP</button>
+                <button class="filter-btn" data-filter="csharp">C#</button>
+            </div>
+            
+            <div class="projects-grid" id="projectsGrid">
+                <!-- Projects will be loaded dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team-section">
+        <div class="container">
+            <h2 class="section-title">فريقنا المبدع</h2>
+            <p class="section-subtitle">عقول مصرية مبدعة تصنع المستقبل الرقمي</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3>فوكس فيجا</h3>
+                    <p class="member-role">مهندس نظم وخوادم</p>
+                    <div class="member-skills">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">DevOps</span>
+                    </div>
+                    <div class="member-contact">
+                        <a href="https://t.me/DevVEGA" class="contact-link">
+                            <i class="fab fa-telegram"></i>
+                            @DevVEGA
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-ninja"></i>
+                    </div>
+                    <h3>كيمي فيجا</h3>
+                    <p class="member-role">مطور واجهات وتجربة مستخدم</p>
+                    <div class="member-skills">
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">UI/UX</span>
+                    </div>
+                    <div class="member-contact">
+                        <a href="https://t.me/TopVeGa" class="contact-link">
+                            <i class="fab fa-telegram"></i>
+                            @TopVeGa
+                        </a>
+                    </div>
+                </div>
+
+                <div class="team-member">
+                    <div class="member-avatar">
+                        <i class="fas fa-user-robot"></i>
+                    </div>
+                    <h3>eng romio</h3>
+                    <p class="member-role">خبير ذكاء اصطناعي</p>
+                    <div class="member-skills">
+                        <span class="skill-tag">Python AI</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Data Science</span>
+                    </div>
+                    <div class="member-contact">
+                        <a href="https://t.me/ENG_ROMIO" class="contact-link">
+                            <i class="fab fa-telegram"></i>
+                            @ENG_ROMIO
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <p class="section-subtitle">كن جزءاً من ثورتنا البرمجية</p>
+            
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">الاسم الكامل</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">نوع الخدمة</label>
+                            <select id="service" name="service" required>
+                                <option value="">اختر الخدمة</option>
+                                <option value="web">تطوير ويب</option>
+                                <option value="mobile">تطبيقات موبايل</option>
+                                <option value="ai">ذكاء اصطناعي</option>
+                                <option value="consulting">استشارات تقنية</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            إرسال الرسالة
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fab fa-telegram"></i>
+                        </div>
+                        <h3>تيليجرام</h3>
+                        <p>تواصل معنا مباشرة عبر التيليجرام</p>
+                        <div class="contact-links">
+                            <a href="https://t.me/TopVeGa" class="contact-link">
+                                <i class="fab fa-telegram"></i> كيمي فيجا
+                            </a>
+                            <a href="https://t.me/DevVEGA" class="contact-link">
+                                <i class="fab fa-telegram"></i> فوكس فيجا
+                            </a>
+                            <a href="https://t.me/ENG_ROMIO" class="contact-link">
+                                <i class="fab fa-telegram"></i> eng romio
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>البريد الإلكتروني</h3>
+                        <p>راسلنا على البريد الإلكتروني</p>
+                        <a href="mailto:info@vega-egypt.com" class="contact-link">
+                            info@vega-egypt.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="vega-logo">VEGA</div>
+                    <p>أول نظام برمجي مصري متكامل يجمع بين أحدث التقنيات العالمية</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>الخدمات</h4>
+                        <a href="#services">تطوير الويب</a>
+                        <a href="#services">الذكاء الاصطناعي</a>
+                        <a href="#services">تطبيقات الموبايل</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>روابط سريعة</h4>
+                        <a href="#home">الرئيسية</a>
+                        <a href="#projects">المشاريع</a>
+                        <a href="#team">الفريق</a>
+                        <a href="admin.html">لوحة التحكم</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 VEGA System. جميع الحقوق محفوظة - أول نظام برمجي مصري متكامل</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/three-background.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
