@@ -1,0 +1,577 @@
+/* أنيميشنات محاكي الطرفية */
+@keyframes terminalGlow {
+    0%, 100% {
+        box-shadow: 
+            0 0 50px rgba(0, 255, 157, 0.2),
+            inset 0 0 50px rgba(0, 255, 157, 0.1);
+    }
+    50% {
+        box-shadow: 
+            0 0 70px rgba(0, 255, 157, 0.4),
+            inset 0 0 60px rgba(0, 255, 157, 0.2);
+    }
+}
+
+@keyframes scanLine {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        transform: translateY(1000%);
+        opacity: 0;
+    }
+}
+
+@keyframes pulseIcon {
+    0%, 100% {
+        transform: scale(1);
+        text-shadow: 0 0 10px currentColor;
+    }
+    50% {
+        transform: scale(1.2);
+        text-shadow: 0 0 20px currentColor;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUpStagger {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rainbowText {
+    0% { color: #00ff9d; }
+    25% { color: #00a2ff; }
+    50% { color: #b300ff; }
+    75% { color: #ff00c8; }
+    100% { color: #00ff9d; }
+}
+
+@keyframes floatUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes typewriter {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes hologramFlicker {
+    0%, 100% {
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    20% {
+        opacity: 0.9;
+        filter: hue-rotate(90deg);
+    }
+    40% {
+        opacity: 1;
+        filter: hue-rotate(180deg);
+    }
+    60% {
+        opacity: 0.8;
+        filter: hue-rotate(270deg);
+    }
+    80% {
+        opacity: 1;
+        filter: hue-rotate(360deg);
+    }
+}
+
+@keyframes dataStream {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes glitch-anim {
+    0% {
+        clip: rect(42px, 9999px, 44px, 0);
+    }
+    5% {
+        clip: rect(12px, 9999px, 59px, 0);
+    }
+    10% {
+        clip: rect(48px, 9999px, 29px, 0);
+    }
+    15% {
+        clip: rect(42px, 9999px, 73px, 0);
+    }
+    20% {
+        clip: rect(63px, 9999px, 27px, 0);
+    }
+    25% {
+        clip: rect(34px, 9999px, 55px, 0);
+    }
+    30% {
+        clip: rect(86px, 9999px, 73px, 0);
+    }
+    35% {
+        clip: rect(20px, 9999px, 20px, 0);
+    }
+    40% {
+        clip: rect(26px, 9999px, 60px, 0);
+    }
+    45% {
+        clip: rect(25px, 9999px, 66px, 0);
+    }
+    50% {
+        clip: rect(57px, 9999px, 98px, 0);
+    }
+    55% {
+        clip: rect(5px, 9999px, 46px, 0);
+    }
+    60% {
+        clip: rect(82px, 9999px, 31px, 0);
+    }
+    65% {
+        clip: rect(54px, 9999px, 27px, 0);
+    }
+    70% {
+        clip: rect(28px, 9999px, 99px, 0);
+    }
+    75% {
+        clip: rect(45px, 9999px, 69px, 0);
+    }
+    80% {
+        clip: rect(23px, 9999px, 85px, 0);
+    }
+    85% {
+        clip: rect(54px, 9999px, 84px, 0);
+    }
+    90% {
+        clip: rect(45px, 9999px, 47px, 0);
+    }
+    95% {
+        clip: rect(37px, 9999px, 20px, 0);
+    }
+    100% {
+        clip: rect(4px, 9999px, 91px, 0);
+    }
+}
+
+@keyframes glitch-anim2 {
+    0% {
+        clip: rect(65px, 9999px, 100px, 0);
+    }
+    5% {
+        clip: rect(52px, 9999px, 74px, 0);
+    }
+    10% {
+        clip: rect(79px, 9999px, 85px, 0);
+    }
+    15% {
+        clip: rect(75px, 9999px, 5px, 0);
+    }
+    20% {
+        clip: rect(67px, 9999px, 61px, 0);
+    }
+    25% {
+        clip: rect(14px, 9999px, 79px, 0);
+    }
+    30% {
+        clip: rect(1px, 9999px, 66px, 0);
+    }
+    35% {
+        clip: rect(86px, 9999px, 30px, 0);
+    }
+    40% {
+        clip: rect(23px, 9999px, 98px, 0);
+    }
+    45% {
+        clip: rect(85px, 9999px, 72px, 0);
+    }
+    50% {
+        clip: rect(71px, 9999px, 75px, 0);
+    }
+    55% {
+        clip: rect(2px, 9999px, 48px, 0);
+    }
+    60% {
+        clip: rect(30px, 9999px, 16px, 0);
+    }
+    65% {
+        clip: rect(59px, 9999px, 50px, 0);
+    }
+    70% {
+        clip: rect(41px, 9999px, 62px, 0);
+    }
+    75% {
+        clip: rect(2px, 9999px, 82px, 0);
+    }
+    80% {
+        clip: rect(47px, 9999px, 73px, 0);
+    }
+    85% {
+        clip: rect(3px, 9999px, 27px, 0);
+    }
+    90% {
+        clip: rect(26px, 9999px, 55px, 0);
+    }
+    95% {
+        clip: rect(42px, 9999px, 97px, 0);
+    }
+    100% {
+        clip: rect(38px, 9999px, 49px, 0);
+    }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+@keyframes vibrate {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-2px);
+    }
+    40%, 80% {
+        transform: translateX(2px);
+    }
+}
+
+@keyframes spin3D {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes zoomPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* تطبيقات الأنيميشن على المحاكي الطرفي */
+.holographic-terminal {
+    animation: terminalGlow 4s ease-in-out infinite, hologramFlicker 8s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+.holographic-terminal::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--neon-green), 
+        var(--neon-blue), 
+        transparent);
+    animation: scanLine 3s linear infinite;
+    z-index: 2;
+}
+
+.vega-info-section {
+    margin-top: 30px;
+    border-top: 1px solid rgba(0, 255, 157, 0.3);
+    padding-top: 20px;
+    position: relative;
+}
+
+.vega-info-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent, 
+        var(--neon-green), 
+        var(--neon-blue), 
+        transparent);
+}
+
+.info-line {
+    margin: 15px 0;
+    padding: 12px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideInFromRight 0.8s ease-out forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(0, 255, 157, 0.1), 
+        transparent);
+    transition: left 0.5s ease;
+}
+
+.info-line:hover::before {
+    left: 100%;
+}
+
+.info-line i {
+    font-size: 1.3rem;
+    animation: pulseIcon 2s infinite;
+    min-width: 25px;
+    text-align: center;
+}
+
+/* أنيميشنات محددة لكل نوع من المعلومات */
+.info-line.highlight {
+    background: rgba(0, 255, 157, 0.1);
+    border: 1px solid rgba(0, 255, 157, 0.3);
+    color: var(--neon-green);
+    animation-delay: 0.2s;
+}
+
+.info-line.channel {
+    background: rgba(0, 162, 255, 0.1);
+    border: 1px solid rgba(0, 162, 255, 0.3);
+    color: var(--neon-blue);
+    animation-delay: 0.4s;
+}
+
+.info-line.copyright {
+    background: rgba(179, 0, 255, 0.1);
+    border: 1px solid rgba(179, 0, 255, 0.3);
+    color: var(--neon-purple);
+    animation: rainbowText 4s linear infinite;
+    animation-delay: 0.6s;
+}
+
+.info-line.developer-title {
+    background: rgba(255, 0, 200, 0.1);
+    border: 1px solid rgba(255, 0, 200, 0.3);
+    color: var(--neon-pink);
+    animation-delay: 0.8s;
+}
+
+.info-line.developer {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    margin-left: 40px;
+    animation: fadeInUpStagger 0.6s ease-out forwards;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.info-line.developer:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.info-line.developer:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.info-line.developer:hover {
+    background: rgba(0, 255, 157, 0.2);
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(0, 255, 157, 0.3);
+}
+
+/* تأثير الكتابة للنصوص */
+.typewriter-text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typewriter 3s steps(40) forwards;
+}
+
+.typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.2em;
+    background-color: var(--neon-green);
+    margin-left: 2px;
+    animation: blinkCursor 1s infinite;
+    vertical-align: middle;
+}
+
+/* تأثير البيانات المتدفقة */
+.data-stream {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, 
+        var(--neon-green), 
+        var(--neon-blue), 
+        var(--neon-purple), 
+        var(--neon-pink));
+    background-size: 200% 100%;
+    animation: dataStream 2s linear infinite;
+}
+
+/* تأثير العائمة للعناصر */
+.float-element {
+    animation: floatUpDown 3s ease-in-out infinite;
+}
+
+/* تأثير الاهتزاز */
+.vibrate {
+    animation: vibrate 0.5s linear;
+}
+
+/* تأثير التوهج للنص */
+.glow-text {
+    text-shadow: 0 0 10px currentColor, 0 0 20px currentColor;
+    animation: pulseIcon 2s infinite;
+}
+
+/* تأثير الظهور التدريجي */
+.stagger-fade-in > * {
+    opacity: 0;
+    animation: fadeInUpStagger 0.6s ease-out forwards;
+}
+
+.stagger-fade-in > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-fade-in > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-fade-in > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-fade-in > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-fade-in > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-fade-in > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* تأثير الدوران */
+.spin-3d {
+    animation: spin3D 2s linear infinite;
+}
+
+/* تأثير التكبير والتصغير */
+.zoom-pulse {
+    animation: zoomPulse 2s ease-in-out infinite;
+}
+
+/* تأثير الانزلاق */
+.slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* تأثير الارتداد */
+.bounce-in {
+    animation: bounceIn 0.8s ease-out forwards;
+}
+
+/* تأثير الموجة */
+.wave {
+    animation: wave 2s ease-in-out infinite;
+}
+
+/* تأثير التلاشي */
+.fade-out {
+    animation: fadeOut 0.5s ease-out forwards;
+}

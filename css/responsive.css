@@ -1,0 +1,284 @@
+/* التجاوب مع الشاشات الكبيرة */
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1500px;
+    }
+    
+    .hero-title {
+        font-size: 7rem;
+    }
+    
+    h2 {
+        font-size: 5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1400px) {
+    .hero-title {
+        font-size: 5.5rem;
+    }
+    
+    h2 {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+    
+    h2 {
+        font-size: 3.5rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-title {
+        font-size: 4rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+    
+    .magnetic-nav {
+        flex-direction: row;
+        bottom: 20px;
+        top: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 10px;
+    }
+    
+    .floating-logo {
+        top: 20px;
+        right: 20px;
+    }
+    
+    .vega-logo {
+        font-size: 2.5rem;
+    }
+    
+    .services-grid,
+    .team-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    section {
+        padding: 80px 5%;
+    }
+    
+    .holographic-terminal {
+        padding: 30px 20px;
+    }
+    
+    .info-line {
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 3.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3 {
+        font-size: 1.8rem;
+    }
+    
+    .magnetic-nav {
+        bottom: 15px;
+    }
+    
+    .magnetic-item {
+        width: 50px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+    
+    .floating-logo {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .vega-logo {
+        font-size: 2rem;
+    }
+    
+    .egyptian-badge {
+        font-size: 0.7rem;
+        padding: 6px 15px;
+    }
+    
+    .holographic-terminal {
+        padding: 25px 15px;
+    }
+    
+    .service-card,
+    .team-member,
+    .contact-card {
+        padding: 30px 20px;
+    }
+    
+    .service-icon,
+    .contact-icon {
+        font-size: 3rem;
+    }
+    
+    .member-avatar {
+        width: 120px;
+        height: 120px;
+        font-size: 2.5rem;
+    }
+    
+    body {
+        cursor: default;
+    }
+    
+    .custom-cursor,
+    .cursor-follower {
+        display: none;
+    }
+    
+    .info-line {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .info-line.developer {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+    
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+    
+    .magnetic-nav {
+        bottom: 10px;
+    }
+    
+    .magnetic-item {
+        width: 45px;
+        height: 45px;
+        font-size: 1rem;
+    }
+    
+    .nav-tooltip {
+        display: none;
+    }
+    
+    .floating-logo {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .vega-logo {
+        font-size: 1.8rem;
+    }
+    
+    .egyptian-badge {
+        font-size: 0.6rem;
+        padding: 5px 12px;
+    }
+    
+    section {
+        padding: 60px 5%;
+    }
+    
+    .service-contacts {
+        gap: 10px;
+    }
+    
+    .contact-btn {
+        padding: 10px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .loading-logo {
+        font-size: 3rem;
+    }
+    
+    .loading-bar {
+        width: 250px;
+    }
+    
+    .holographic-terminal {
+        padding: 20px 15px;
+    }
+    
+    .terminal-body {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .services-grid,
+    .team-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-card,
+    .team-member,
+    .contact-card {
+        padding: 25px 15px;
+    }
+    
+    .holographic-terminal {
+        padding: 15px 10px;
+    }
+    
+    .terminal-body {
+        font-size: 0.8rem;
+    }
+    
+    .info-line {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}
